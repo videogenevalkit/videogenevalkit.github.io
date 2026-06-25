@@ -95,21 +95,28 @@ function renderBench(board, rows){
     const ia=GROUP_ORDER.indexOf(a), ib=GROUP_ORDER.indexOf(b); return (ia<0?99:ia)-(ib<0?99:ib); });
   Object.values(dimsByGroup).forEach(ds=>ds.sort());
   const rankGroups=groups.filter(g=>g!=="holistic");
+  // headline = the bench's own judged holistic axis (e.g. semantic_alignment "overall");
+  // when present it IS the Score column + default sort and is shown first (not buried at the end).
+  const holisticDims=dimsByGroup["holistic"]||[];
+  const overallDim=holisticDims.includes("overall")?"overall":holisticDims[0];
+  const hasHead=!!overallDim;
+  const dispGroups=hasHead?rankGroups:groups; // when headlined, drop the trailing holistic group
   const gmean={}, score={};
   models.forEach(m=>{ gmean[m]={};
     groups.forEach(g=>{ const vs=dimsByGroup[g].map(d=>cell[m][d]?norm(cell[m][d]):null).filter(x=>x!==null); gmean[m][g]=mean(vs); });
-    score[m]=mean(rankGroups.map(g=>gmean[m][g]).filter(x=>!isNaN(x))); });
+    score[m]=hasHead?(cell[m][overallDim]?norm(cell[m][overallDim]):NaN)
+                    :mean(rankGroups.map(g=>gmean[m][g]).filter(x=>!isNaN(x))); });
   const keyVal=(m)=> sortKey==="__score__"?score[m]
     : sortKey.startsWith("g:")?gmean[m][sortKey.slice(2)]
     : (cell[m][sortKey]?norm(cell[m][sortKey]):-1);
   const sorted=models.slice().sort((a,b)=> sortDesc?keyVal(b)-keyVal(a):keyVal(a)-keyVal(b));
 
   let h="<table><thead><tr><th rowspan=2 class=rank>#</th><th rowspan=2 class=model>model</th>"
-       +`<th rowspan=2 class="sortable sc-col" data-k="__score__">Score<br><span class=sc>group-μ mean</span></th>`;
-  groups.forEach(g=>{ const span=dimsByGroup[g].length+1; const lbl=g==="holistic"?"holistic (judge)":g;
-    h+=`<th colspan=${span} class="grp grp-${g}">${lbl}</th>`; });
+       +`<th rowspan=2 class="sortable sc-col" data-k="__score__">${hasHead?overallDim:"Score"}<br><span class=sc>${hasHead?"overall · judge":"group-μ mean"}</span></th>`;
+  dispGroups.forEach(g=>{ const span=dimsByGroup[g].length+1;
+    h+=`<th colspan=${span} class="grp grp-${g}">${g}</th>`; });
   h+="</tr><tr>";
-  groups.forEach(g=>{ h+=`<th class="sortable mu" data-k="g:${g}">μ</th>`;
+  dispGroups.forEach(g=>{ h+=`<th class="sortable mu" data-k="g:${g}">μ</th>`;
     dimsByGroup[g].forEach(d=>{ const sx=scale[d]!=="0-1"?`<br><span class=sc>${scale[d]}</span>`:"";
       const jd=jdep[d]?' <span class=jd title="judge-dependent — not shared across judges">⚖</span>':"";
       h+=`<th class="sortable dim${jdep[d]?" jdep":""}" data-k="${d}">${d}${jd}${sx}</th>`; }); });
@@ -118,8 +125,9 @@ function renderBench(board, rows){
     const medal=i<3?`<span class=medal>${["🥇","🥈","🥉"][i]}</span>`:(i+1);
     h+=`<tr class="${i<3?"top"+(i+1):""}"><td class=rank>${medal}</td><td class=model title="${m}">${m}</td>`;
     const pct=Math.round((isNaN(score[m])?0:score[m])*100);
-    h+=`<td class="sc-col"><div class=scorewrap><b>${isNaN(score[m])?"—":score[m].toFixed(3)}</b><span class=sbar><i style="width:${pct}%"></i></span></div></td>`;
-    groups.forEach(g=>{
+    const sv=hasHead?(cell[m][overallDim]?cell[m][overallDim].score.toFixed(2):"—"):(isNaN(score[m])?"—":score[m].toFixed(3));
+    h+=`<td class="sc-col"><div class=scorewrap><b>${sv}</b><span class=sbar><i style="width:${pct}%"></i></span></div></td>`;
+    dispGroups.forEach(g=>{
       h+=`<td class="mu" style="background:${heat(gmean[m][g]||0)}">${isNaN(gmean[m][g])?"—":gmean[m][g].toFixed(2)}</td>`;
       dimsByGroup[g].forEach(d=>{ const r=cell[m][d];
         if(!r){ h+="<td>—</td>"; return; }
