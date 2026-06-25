@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>videogenevalkit · leaderboard</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header>
+  <h1>videogenevalkit <span class="muted">· results leaderboard</span></h1>
+  <p class="muted">Fair, context-partitioned T2V evaluation. A leaderboard is only
+  shown <b>within one comparison context</b> — same benchmark · prompt-set · judge
+  · profile — because scores are not comparable across them.</p>
+</header>
+
+<section id="controls">
+  <label>Benchmark <select id="sel-bench"></select></label>
+  <label>Prompt set <select id="sel-pset"></select></label>
+  <label>Judge <select id="sel-judge"></select></label>
+  <label>Profile <select id="sel-profile"></select></label>
+</section>
+
+<div id="ctx-badge" class="badge"></div>
+<div id="board"></div>
+
+<footer class="muted">
+  <span id="meta"></span> · source of truth: <code>results/index.jsonl</code> ·
+  <a href="https://github.com/videogenevalkit/videogenevalkit">toolkit</a>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
