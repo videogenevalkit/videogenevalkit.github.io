@@ -84,5 +84,5 @@ function render(){
 }
 
 ["sel-bench","sel-pset","sel-judge","sel-profile"].forEach(id=>document.getElementById(id).addEventListener("change",()=>{refreshSelectors();render();}));
-fetch("site/data.json").then(r=>r.json()).then(d=>{ DATA=d; refreshSelectors(); render(); })
+fetch("site/data.json?_="+Date.now()).then(r=>r.json()).then(d=>{ DATA=d; refreshSelectors(); render(); })
   .catch(e=>{ $("#board").innerHTML="<p class=muted>failed to load data.json: "+e+"</p>"; });
