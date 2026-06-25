@@ -22,10 +22,18 @@
   sets produce different absolute scores, so each context is its own board.</p>
 </header>
 
+<nav id="views">
+  <button data-view="leaderboard" class="on">Leaderboard</button>
+  <button data-view="compare">Compare</button>
+  <button data-view="modelcard">Model card</button>
+  <button data-view="dimensions">Dimensions</button>
+</nav>
+
 <section id="controls">
   <label>Board<select id="sel-board"></select></label>
   <span id="facets"></span>
 </section>
+<div id="subcontrols"></div>
 
 <div id="ctx-badge" class="badge"></div>
 <div id="board"></div>
