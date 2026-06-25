@@ -16,11 +16,13 @@
      "dims": [
       {
        "id": "subject_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "background_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -29,23 +31,28 @@
      "dims": [
       {
        "id": "temporal_flickering",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "motion_smoothness",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "dynamic_degree",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "aesthetic_quality",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "imaging_quality",
-       "scale": "0-100"
+       "scale": "0-100",
+       "judge_dependent": false
       }
      ]
     },
@@ -54,27 +61,33 @@
      "dims": [
       {
        "id": "object_class",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "multiple_objects",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "color",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "scene",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "temporal_style",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "appearance_style",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -83,7 +96,8 @@
      "dims": [
       {
        "id": "human_action",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -92,7 +106,8 @@
      "dims": [
       {
        "id": "spatial_relationship",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -101,7 +116,8 @@
      "dims": [
       {
        "id": "overall_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     }
@@ -133,15 +149,18 @@
      "dims": [
       {
        "id": "imaging_quality",
-       "scale": "0-100"
+       "scale": "0-100",
+       "judge_dependent": false
       },
       {
        "id": "aesthetic_quality",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "motion_effects",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -150,27 +169,33 @@
      "dims": [
       {
        "id": "temporal_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "video_text_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "object_class_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "color_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "action_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "scene_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     }
@@ -191,23 +216,28 @@
      "dims": [
       {
        "id": "subject_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "scene_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "inertial_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "object_permanence",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "semantic_drift",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -216,31 +246,38 @@
      "dims": [
       {
        "id": "motion_smoothness",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "temporal_flickering",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "dynamic_degree",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "composition_framing",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "lighting_volumetric",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "color_harmony",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "structural_gestalt",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -249,7 +286,8 @@
      "dims": [
       {
        "id": "physical_mechanics",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -258,7 +296,8 @@
      "dims": [
       {
        "id": "human_fidelity",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -267,7 +306,8 @@
      "dims": [
       {
        "id": "semantic_adherence",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -276,7 +316,8 @@
      "dims": [
       {
        "id": "spatial_relationship",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     }
@@ -297,11 +338,13 @@
      "dims": [
       {
        "id": "consistent_attribute",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "dynamic_attribute",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -310,11 +353,13 @@
      "dims": [
       {
        "id": "action_binding",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "object_interactions",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -323,11 +368,13 @@
      "dims": [
       {
        "id": "spatial_relationships",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "motion_binding",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -336,7 +383,8 @@
      "dims": [
       {
        "id": "generative_numeracy",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     }
@@ -357,23 +405,28 @@
      "dims": [
       {
        "id": "solid_mechanics",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "fluid_dynamics",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "optics",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "thermodynamics",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "magnetism",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     }
@@ -394,15 +447,18 @@
      "dims": [
       {
        "id": "subject_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "background_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "video_image_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -411,23 +467,28 @@
      "dims": [
       {
        "id": "temporal_flickering",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "motion_smoothness",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "dynamic_degree",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "aesthetic_quality",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "imaging_quality",
-       "scale": "0-100"
+       "scale": "0-100",
+       "judge_dependent": false
       }
      ]
     },
@@ -436,27 +497,33 @@
      "dims": [
       {
        "id": "object_class",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "multiple_objects",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "color",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "scene",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "temporal_style",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "appearance_style",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -465,7 +532,8 @@
      "dims": [
       {
        "id": "human_action",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -474,7 +542,8 @@
      "dims": [
       {
        "id": "spatial_relationship",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -483,7 +552,8 @@
      "dims": [
       {
        "id": "overall_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -492,11 +562,13 @@
      "dims": [
       {
        "id": "i2v_subject",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "i2v_background",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -505,7 +577,8 @@
      "dims": [
       {
        "id": "camera_motion",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -514,23 +587,28 @@
      "dims": [
       {
        "id": "culture_fairness",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "gender_bias",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "skin_tone_bias",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "content_safety",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "refusal_rate",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     }
@@ -551,51 +629,63 @@
      "dims": [
       {
        "id": "tic_tac_toe",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "sudoku",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "n_queens",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "tower_of_hanoi",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "color_connection",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "shape_matching",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "rule_following",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "sequence_continuation",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "block_sliding",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "domino_chain",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "pendulum",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "projectile",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -604,7 +694,8 @@
      "dims": [
       {
        "id": "maze_navigation",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     }
@@ -625,11 +716,13 @@
      "dims": [
       {
        "id": "camera_control",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "object_control",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -638,7 +731,8 @@
      "dims": [
       {
        "id": "content_alignment",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -647,15 +741,18 @@
      "dims": [
       {
        "id": "3d_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "photometric_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "style_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -664,11 +761,13 @@
      "dims": [
       {
        "id": "subjective_quality",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "motion_smoothness",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -677,7 +776,8 @@
      "dims": [
       {
        "id": "motion_accuracy",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -686,7 +786,8 @@
      "dims": [
       {
        "id": "motion_magnitude",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     }
@@ -707,39 +808,48 @@
      "dims": [
       {
        "id": "object_class",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       },
       {
        "id": "multiple_objects",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       },
       {
        "id": "color",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       },
       {
        "id": "material",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       },
       {
        "id": "scene",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       },
       {
        "id": "style",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       },
       {
        "id": "pose",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       },
       {
        "id": "emotion",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       },
       {
        "id": "text_ocr",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       }
      ]
     },
@@ -748,7 +858,8 @@
      "dims": [
       {
        "id": "spatial_relationship",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       }
      ]
     },
@@ -757,31 +868,38 @@
      "dims": [
       {
        "id": "action",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       },
       {
        "id": "motion_order",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       },
       {
        "id": "dynamic_attribute",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       },
       {
        "id": "dynamic_spatial_relationship",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       },
       {
        "id": "human_interaction",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       },
       {
        "id": "complex_plot",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       },
       {
        "id": "complex_landscape",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       }
      ]
     },
@@ -790,11 +908,13 @@
      "dims": [
       {
        "id": "camera_motion",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       },
       {
        "id": "shot_composition",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       }
      ]
     },
@@ -803,7 +923,8 @@
      "dims": [
       {
        "id": "temporal_modifier",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       }
      ]
     },
@@ -812,7 +933,8 @@
      "dims": [
       {
        "id": "overall",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       }
      ]
     }
@@ -833,27 +955,33 @@
      "dims": [
       {
        "id": "aesthetic_quality",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "imaging_quality",
-       "scale": "0-100"
+       "scale": "0-100",
+       "judge_dependent": false
       },
       {
        "id": "temporal_flickering",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "dynamic_degree",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "motion_smoothness",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "hpsv3_quality",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -862,35 +990,43 @@
      "dims": [
       {
        "id": "background_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "subject_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "spatial_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "gated_spatial_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "perspective_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "segment_continuity",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "geometric_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "photometric_consistency",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     },
@@ -899,11 +1035,13 @@
      "dims": [
       {
        "id": "scene_adherence",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       },
       {
        "id": "subject_adherence",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       }
      ]
     },
@@ -912,19 +1050,23 @@
      "dims": [
       {
        "id": "navigation_trajectory",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       },
       {
        "id": "event_edit_adherence",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       },
       {
        "id": "subject_action_adherence",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       },
       {
        "id": "perspective_switch_adherence",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       }
      ]
     },
@@ -933,11 +1075,13 @@
      "dims": [
       {
        "id": "causal_fidelity",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": true
       },
       {
        "id": "visual_plausibility",
-       "scale": "0-1"
+       "scale": "0-1",
+       "judge_dependent": false
       }
      ]
     }

@@ -22,7 +22,8 @@ const boardRows = (id) => DATA.filter(r=>r.benchmark===id);
 function buildBoardSelect(){
   const sel = $("#sel-board");
   const opt = (b)=>{ const has=boardRows(b.id).length>0;
-    return `<option value="${b.id}"${has?"":" class=ph"}>${b.label}${has?"":" · —"}</option>`; };
+    const sub = b.type==="family" && b.columns ? ` (${b.columns.map(c=>c.id).join(" · ")})` : "";
+    return `<option value="${b.id}"${has?"":" class=ph"}>${b.label}${sub}${has?"":" · —"}</option>`; };
   const benches = CAT.boards.filter(b=>b.type==="benchmark");
   const fams = CAT.boards.filter(b=>b.type==="family");
   sel.innerHTML = `<optgroup label="Benchmarks">${benches.map(opt).join("")}</optgroup>`
@@ -55,6 +56,25 @@ function currentRows(board){
   return rows;
 }
 
+// L7: judge-independent dims are shared across judge contexts. A (bench, judge)
+// board renders judge-DEPENDENT dims only from the selected judge, but pulls
+// judge-INDEPENDENT (CV) dims from any judge's run (preferring the selected one).
+function judgeDepMap(board){ const m={};
+  (board.groups||[]).forEach(g=>g.dims.forEach(d=>{ m[d.id]=!!d.judge_dependent; })); return m; }
+function rowsForBench(board){
+  const jdep=judgeDepMap(board);
+  const nonJudge=(board.context_facets||[]).filter(f=>f!=="judge");
+  let base=boardRows(board.id);
+  nonJudge.forEach(f=>{ const g=FACET_GET[f]; if(g&&facetState[f]!=null) base=base.filter(r=>g(r)===facetState[f]); });
+  const judge=facetState.judge, out=[], seen=new Set();
+  // pass 1: judge-dependent dims (selected judge only) + independent dims from selected judge
+  base.forEach(r=>{ if(jdep[r.dimension]){ if(r.judge===judge) out.push(r); }
+    else if(r.judge===judge){ const k=r.model+"|"+r.dimension; if(!seen.has(k)){seen.add(k);out.push(r);} } });
+  // pass 2: independent dims still missing → pull from any other judge (identical by construction)
+  base.forEach(r=>{ if(!jdep[r.dimension]){ const k=r.model+"|"+r.dimension; if(!seen.has(k)){seen.add(k);out.push(r);} } });
+  return out;
+}
+
 let sortKey="__score__", sortDesc=true;
 
 function setBadge(board, n){
@@ -66,6 +86,7 @@ function setBadge(board, n){
 
 // ---- benchmark board: grouped-dimension table ----
 function renderBench(board, rows){
+  const jdep=judgeDepMap(board);
   const models=uniq(rows.map(r=>r.model));
   const cell={}, grp={}, scale={};
   rows.forEach(r=>{ (cell[r.model]=cell[r.model]||{})[r.dimension]=r; grp[r.dimension]=r.group||"other"; scale[r.dimension]=r.scale; });
@@ -90,7 +111,8 @@ function renderBench(board, rows){
   h+="</tr><tr>";
   groups.forEach(g=>{ h+=`<th class="sortable mu" data-k="g:${g}">μ</th>`;
     dimsByGroup[g].forEach(d=>{ const sx=scale[d]!=="0-1"?`<br><span class=sc>${scale[d]}</span>`:"";
-      h+=`<th class="sortable dim" data-k="${d}">${d}${sx}</th>`; }); });
+      const jd=jdep[d]?' <span class=jd title="judge-dependent — not shared across judges">⚖</span>':"";
+      h+=`<th class="sortable dim${jdep[d]?" jdep":""}" data-k="${d}">${d}${jd}${sx}</th>`; }); });
   h+="</tr></thead><tbody>";
   sorted.forEach((m,i)=>{
     const medal=i<3?`<span class=medal>${["🥇","🥈","🥉"][i]}</span>`:(i+1);
@@ -163,7 +185,7 @@ function wireSort(){
 
 function render(){
   const board=boardById($("#sel-board").value); if(!board) return;
-  const rows=currentRows(board);
+  const rows = board.type==="benchmark" ? rowsForBench(board) : currentRows(board);
   setBadge(board, rows.length);
   if(!rows.length){ renderPlaceholder(board); return; }
   if(board.type==="benchmark") renderBench(board, rows); else renderFamily(board, rows);
