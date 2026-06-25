@@ -22,3 +22,13 @@ th .sc { font-weight: 400; font-size: 10px; color: var(--mut); }
 #board { overflow-x: auto; }
 footer { margin-top: 22px; padding-top: 12px; border-top: 1px solid var(--line); }
 a { color: var(--accent); }
+/* grouped header bands */
+th.grp { font-size: 11.5px; letter-spacing: .03em; text-transform: uppercase; border-bottom: 2px solid #fff; }
+.grp-video_quality,.grp-entity { background:#eaf3ff; } .grp-consistency,.grp-spatial { background:#eafaf1; }
+.grp-setting_adherence,.grp-event { background:#fef6e7; } .grp-interaction_adherence,.grp-cinematic { background:#fdeef2; }
+.grp-causality,.grp-modifier,.grp-attribute,.grp-action,.grp-numeracy { background:#f0eefb; }
+.grp-holistic { background:#eceff3; }
+th.mu, td.mu { font-weight:600; border-left:2px solid #cbd5e1; }
+th.dim { font-weight:400; font-size:11px; }
+th.sc-col, td.sc-col { border-right:2px solid #cbd5e1; font-size:14px; }
+th.mu, th.dim { writing-mode: horizontal-tb; }
