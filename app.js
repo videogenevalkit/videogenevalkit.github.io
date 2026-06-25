@@ -179,13 +179,13 @@ function radarSVG(axes, series){
   const size=360, cx=size/2, cy=size/2, R=size/2-58, n=axes.length;
   const ang=(i)=> -Math.PI/2 + i*2*Math.PI/n;
   const pt=(i,r)=>[cx+Math.cos(ang(i))*R*r, cy+Math.sin(ang(i))*R*r];
-  let s=`<svg viewBox="0 0 ${size} ${size}" class=radar>`;
-  [0.25,0.5,0.75,1].forEach(g=>{ const p=axes.map((_,i)=>pt(i,g).map(v=>v.toFixed(1)).join(",")).join(" "); s+=`<polygon points="${p}" class=ring/>`; });
-  axes.forEach((a,i)=>{ const [x,y]=pt(i,1); s+=`<line x1=${cx} y1=${cy} x2=${x.toFixed(1)} y2=${y.toFixed(1)} class=spoke/>`;
+  let s=`<svg viewBox="0 0 ${size} ${size}" class="radar">`;
+  [0.25,0.5,0.75,1].forEach(g=>{ const p=axes.map((_,i)=>pt(i,g).map(v=>v.toFixed(1)).join(",")).join(" "); s+=`<polygon points="${p}" class="ring" />`; });
+  axes.forEach((a,i)=>{ const [x,y]=pt(i,1); s+=`<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" class="spoke" />`;
     const [lx,ly]=pt(i,1.14); const anchor=Math.abs(lx-cx)<4?"middle":(lx>cx?"start":"end");
-    s+=`<text x=${lx.toFixed(1)} y=${ly.toFixed(1)} class=rlabel text-anchor=${anchor}>${a}</text>`; });
+    s+=`<text x="${lx.toFixed(1)}" y="${ly.toFixed(1)}" class="rlabel" text-anchor="${anchor}">${a}</text>`; });
   series.forEach(se=>{ const p=se.values.map((v,i)=>pt(i,Math.max(0.02,isNaN(v)?0:v)).map(x=>x.toFixed(1)).join(",")).join(" ");
-    s+=`<polygon points="${p}" fill="${se.color}1f" stroke="${se.color}" stroke-width=2/>`; });
+    s+=`<polygon points="${p}" fill="${se.color}1f" stroke="${se.color}" stroke-width="2" />`; });
   s+=`</svg>`; return s;
 }
 function legend(series){ return `<div class=legend2>`+series.map(se=>`<span class=lg><i class=dot style="background:${se.color}"></i>${se.name}</span>`).join("")+`</div>`; }
