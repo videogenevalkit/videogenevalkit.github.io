@@ -1,0 +1,40 @@
+name: validate-leaderboard-data
+on:
+  push:
+    paths: [site/data.json, site/catalog.json, results/index.jsonl]
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate data.json against catalog.json
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          cat = json.load(open("site/catalog.json"))
+          data = json.load(open("site/data.json"))
+          board_ids = {b["id"] for b in cat["boards"]}
+          errs = []
+          if not isinstance(data, list):
+              errs.append("data.json is not a list")
+          seen = set()
+          for i, r in enumerate(data):
+              for k in ("benchmark","model","dimension","score","scale"):
+                  if k not in r:
+                      errs.append(f"row {i}: missing {k}")
+              b = r.get("benchmark")
+              if b not in board_ids:
+                  errs.append(f"row {i}: benchmark {b!r} not in catalog")
+              if not isinstance(r.get("score"), (int, float)):
+                  errs.append(f"row {i}: score not numeric")
+              key = (b, r.get("model"), r.get("dimension"), r.get("judge"),
+                     (r.get("prompt_set") or {}).get("name"), r.get("profile"))
+              if key in seen:
+                  errs.append(f"row {i}: duplicate {key}")
+              seen.add(key)
+          if errs:
+              print("\n".join(errs[:50]))
+              sys.exit(f"{len(errs)} validation error(s)")
+          print(f"OK: {len(data)} rows, {len(board_ids)} catalog boards, no dupes")
+          PY
