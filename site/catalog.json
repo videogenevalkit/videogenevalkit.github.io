@@ -1,0 +1,1110 @@
+{
+ "version": 1,
+ "boards": [
+  {
+   "id": "vbench",
+   "type": "benchmark",
+   "label": "VBench",
+   "context_facets": [
+    "prompt_set",
+    "judge",
+    "profile"
+   ],
+   "groups": [
+    {
+     "id": "consistency",
+     "dims": [
+      {
+       "id": "subject_consistency",
+       "scale": "0-1"
+      },
+      {
+       "id": "background_consistency",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "video_quality",
+     "dims": [
+      {
+       "id": "temporal_flickering",
+       "scale": "0-1"
+      },
+      {
+       "id": "motion_smoothness",
+       "scale": "0-1"
+      },
+      {
+       "id": "dynamic_degree",
+       "scale": "0-1"
+      },
+      {
+       "id": "aesthetic_quality",
+       "scale": "0-1"
+      },
+      {
+       "id": "imaging_quality",
+       "scale": "0-100"
+      }
+     ]
+    },
+    {
+     "id": "entity",
+     "dims": [
+      {
+       "id": "object_class",
+       "scale": "0-1"
+      },
+      {
+       "id": "multiple_objects",
+       "scale": "0-1"
+      },
+      {
+       "id": "color",
+       "scale": "0-1"
+      },
+      {
+       "id": "scene",
+       "scale": "0-1"
+      },
+      {
+       "id": "temporal_style",
+       "scale": "0-1"
+      },
+      {
+       "id": "appearance_style",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "event",
+     "dims": [
+      {
+       "id": "human_action",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "spatial",
+     "dims": [
+      {
+       "id": "spatial_relationship",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "holistic",
+     "dims": [
+      {
+       "id": "overall_consistency",
+       "scale": "0-1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vbench2",
+   "type": "benchmark",
+   "label": "VBench-2.0",
+   "context_facets": [
+    "prompt_set",
+    "judge",
+    "profile"
+   ],
+   "groups": []
+  },
+  {
+   "id": "videobench",
+   "type": "benchmark",
+   "label": "VideoBench",
+   "context_facets": [
+    "prompt_set",
+    "judge",
+    "profile"
+   ],
+   "groups": [
+    {
+     "id": "video_quality",
+     "dims": [
+      {
+       "id": "imaging_quality",
+       "scale": "0-100"
+      },
+      {
+       "id": "aesthetic_quality",
+       "scale": "0-1"
+      },
+      {
+       "id": "motion_effects",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "consistency",
+     "dims": [
+      {
+       "id": "temporal_consistency",
+       "scale": "0-1"
+      },
+      {
+       "id": "video_text_consistency",
+       "scale": "0-1"
+      },
+      {
+       "id": "object_class_consistency",
+       "scale": "0-1"
+      },
+      {
+       "id": "color_consistency",
+       "scale": "0-1"
+      },
+      {
+       "id": "action_consistency",
+       "scale": "0-1"
+      },
+      {
+       "id": "scene_consistency",
+       "scale": "0-1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "worldjen",
+   "type": "benchmark",
+   "label": "WorldJen",
+   "context_facets": [
+    "prompt_set",
+    "judge",
+    "profile"
+   ],
+   "groups": [
+    {
+     "id": "consistency",
+     "dims": [
+      {
+       "id": "subject_consistency",
+       "scale": "0-1"
+      },
+      {
+       "id": "scene_consistency",
+       "scale": "0-1"
+      },
+      {
+       "id": "inertial_consistency",
+       "scale": "0-1"
+      },
+      {
+       "id": "object_permanence",
+       "scale": "0-1"
+      },
+      {
+       "id": "semantic_drift",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "video_quality",
+     "dims": [
+      {
+       "id": "motion_smoothness",
+       "scale": "0-1"
+      },
+      {
+       "id": "temporal_flickering",
+       "scale": "0-1"
+      },
+      {
+       "id": "dynamic_degree",
+       "scale": "0-1"
+      },
+      {
+       "id": "composition_framing",
+       "scale": "0-1"
+      },
+      {
+       "id": "lighting_volumetric",
+       "scale": "0-1"
+      },
+      {
+       "id": "color_harmony",
+       "scale": "0-1"
+      },
+      {
+       "id": "structural_gestalt",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "causality",
+     "dims": [
+      {
+       "id": "physical_mechanics",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "entity",
+     "dims": [
+      {
+       "id": "human_fidelity",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "event",
+     "dims": [
+      {
+       "id": "semantic_adherence",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "spatial",
+     "dims": [
+      {
+       "id": "spatial_relationship",
+       "scale": "0-1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "t2vcompbench",
+   "type": "benchmark",
+   "label": "T2V-CompBench",
+   "context_facets": [
+    "prompt_set",
+    "judge",
+    "profile"
+   ],
+   "groups": [
+    {
+     "id": "attribute",
+     "dims": [
+      {
+       "id": "consistent_attribute",
+       "scale": "0-1"
+      },
+      {
+       "id": "dynamic_attribute",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "action",
+     "dims": [
+      {
+       "id": "action_binding",
+       "scale": "0-1"
+      },
+      {
+       "id": "object_interactions",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "spatial",
+     "dims": [
+      {
+       "id": "spatial_relationships",
+       "scale": "0-1"
+      },
+      {
+       "id": "motion_binding",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "numeracy",
+     "dims": [
+      {
+       "id": "generative_numeracy",
+       "scale": "0-1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "physics_iq",
+   "type": "benchmark",
+   "label": "Physics-IQ",
+   "context_facets": [
+    "prompt_set",
+    "judge",
+    "profile"
+   ],
+   "groups": [
+    {
+     "id": "causality",
+     "dims": [
+      {
+       "id": "solid_mechanics",
+       "scale": "0-1"
+      },
+      {
+       "id": "fluid_dynamics",
+       "scale": "0-1"
+      },
+      {
+       "id": "optics",
+       "scale": "0-1"
+      },
+      {
+       "id": "thermodynamics",
+       "scale": "0-1"
+      },
+      {
+       "id": "magnetism",
+       "scale": "0-1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vbench_pp",
+   "type": "benchmark",
+   "label": "VBench++",
+   "context_facets": [
+    "prompt_set",
+    "judge",
+    "profile"
+   ],
+   "groups": [
+    {
+     "id": "consistency",
+     "dims": [
+      {
+       "id": "subject_consistency",
+       "scale": "0-1"
+      },
+      {
+       "id": "background_consistency",
+       "scale": "0-1"
+      },
+      {
+       "id": "video_image_consistency",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "video_quality",
+     "dims": [
+      {
+       "id": "temporal_flickering",
+       "scale": "0-1"
+      },
+      {
+       "id": "motion_smoothness",
+       "scale": "0-1"
+      },
+      {
+       "id": "dynamic_degree",
+       "scale": "0-1"
+      },
+      {
+       "id": "aesthetic_quality",
+       "scale": "0-1"
+      },
+      {
+       "id": "imaging_quality",
+       "scale": "0-100"
+      }
+     ]
+    },
+    {
+     "id": "entity",
+     "dims": [
+      {
+       "id": "object_class",
+       "scale": "0-1"
+      },
+      {
+       "id": "multiple_objects",
+       "scale": "0-1"
+      },
+      {
+       "id": "color",
+       "scale": "0-1"
+      },
+      {
+       "id": "scene",
+       "scale": "0-1"
+      },
+      {
+       "id": "temporal_style",
+       "scale": "0-1"
+      },
+      {
+       "id": "appearance_style",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "event",
+     "dims": [
+      {
+       "id": "human_action",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "spatial",
+     "dims": [
+      {
+       "id": "spatial_relationship",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "holistic",
+     "dims": [
+      {
+       "id": "overall_consistency",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "i2v",
+     "dims": [
+      {
+       "id": "i2v_subject",
+       "scale": "0-1"
+      },
+      {
+       "id": "i2v_background",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "cinematic",
+     "dims": [
+      {
+       "id": "camera_motion",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "trust",
+     "dims": [
+      {
+       "id": "culture_fairness",
+       "scale": "0-1"
+      },
+      {
+       "id": "gender_bias",
+       "scale": "0-1"
+      },
+      {
+       "id": "skin_tone_bias",
+       "scale": "0-1"
+      },
+      {
+       "id": "content_safety",
+       "scale": "0-1"
+      },
+      {
+       "id": "refusal_rate",
+       "scale": "0-1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "v_reasonbench",
+   "type": "benchmark",
+   "label": "V-ReasonBench",
+   "context_facets": [
+    "prompt_set",
+    "judge",
+    "profile"
+   ],
+   "groups": [
+    {
+     "id": "reasoning",
+     "dims": [
+      {
+       "id": "tic_tac_toe",
+       "scale": "0-1"
+      },
+      {
+       "id": "sudoku",
+       "scale": "0-1"
+      },
+      {
+       "id": "n_queens",
+       "scale": "0-1"
+      },
+      {
+       "id": "tower_of_hanoi",
+       "scale": "0-1"
+      },
+      {
+       "id": "color_connection",
+       "scale": "0-1"
+      },
+      {
+       "id": "shape_matching",
+       "scale": "0-1"
+      },
+      {
+       "id": "rule_following",
+       "scale": "0-1"
+      },
+      {
+       "id": "sequence_continuation",
+       "scale": "0-1"
+      },
+      {
+       "id": "block_sliding",
+       "scale": "0-1"
+      },
+      {
+       "id": "domino_chain",
+       "scale": "0-1"
+      },
+      {
+       "id": "pendulum",
+       "scale": "0-1"
+      },
+      {
+       "id": "projectile",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "event",
+     "dims": [
+      {
+       "id": "maze_navigation",
+       "scale": "0-1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "worldscore",
+   "type": "benchmark",
+   "label": "WorldScore",
+   "context_facets": [
+    "prompt_set",
+    "judge",
+    "profile"
+   ],
+   "groups": [
+    {
+     "id": "cinematic",
+     "dims": [
+      {
+       "id": "camera_control",
+       "scale": "0-1"
+      },
+      {
+       "id": "object_control",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "entity",
+     "dims": [
+      {
+       "id": "content_alignment",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "consistency",
+     "dims": [
+      {
+       "id": "3d_consistency",
+       "scale": "0-1"
+      },
+      {
+       "id": "photometric_consistency",
+       "scale": "0-1"
+      },
+      {
+       "id": "style_consistency",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "video_quality",
+     "dims": [
+      {
+       "id": "subjective_quality",
+       "scale": "0-1"
+      },
+      {
+       "id": "motion_smoothness",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "causality",
+     "dims": [
+      {
+       "id": "motion_accuracy",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "neutral",
+     "dims": [
+      {
+       "id": "motion_magnitude",
+       "scale": "0-1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "semantic_alignment",
+   "type": "benchmark",
+   "label": "Semantic Alignment",
+   "context_facets": [
+    "prompt_set",
+    "judge",
+    "profile"
+   ],
+   "groups": [
+    {
+     "id": "entity",
+     "dims": [
+      {
+       "id": "object_class",
+       "scale": "0-1"
+      },
+      {
+       "id": "multiple_objects",
+       "scale": "0-1"
+      },
+      {
+       "id": "color",
+       "scale": "0-1"
+      },
+      {
+       "id": "material",
+       "scale": "0-1"
+      },
+      {
+       "id": "scene",
+       "scale": "0-1"
+      },
+      {
+       "id": "style",
+       "scale": "0-1"
+      },
+      {
+       "id": "pose",
+       "scale": "0-1"
+      },
+      {
+       "id": "emotion",
+       "scale": "0-1"
+      },
+      {
+       "id": "text_ocr",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "spatial",
+     "dims": [
+      {
+       "id": "spatial_relationship",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "event",
+     "dims": [
+      {
+       "id": "action",
+       "scale": "0-1"
+      },
+      {
+       "id": "motion_order",
+       "scale": "0-1"
+      },
+      {
+       "id": "dynamic_attribute",
+       "scale": "0-1"
+      },
+      {
+       "id": "dynamic_spatial_relationship",
+       "scale": "0-1"
+      },
+      {
+       "id": "human_interaction",
+       "scale": "0-1"
+      },
+      {
+       "id": "complex_plot",
+       "scale": "0-1"
+      },
+      {
+       "id": "complex_landscape",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "cinematic",
+     "dims": [
+      {
+       "id": "camera_motion",
+       "scale": "0-1"
+      },
+      {
+       "id": "shot_composition",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "modifier",
+     "dims": [
+      {
+       "id": "temporal_modifier",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "holistic",
+     "dims": [
+      {
+       "id": "overall",
+       "scale": "0-1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "wbench",
+   "type": "benchmark",
+   "label": "WBench",
+   "context_facets": [
+    "prompt_set",
+    "judge",
+    "profile"
+   ],
+   "groups": [
+    {
+     "id": "video_quality",
+     "dims": [
+      {
+       "id": "aesthetic_quality",
+       "scale": "0-1"
+      },
+      {
+       "id": "imaging_quality",
+       "scale": "0-100"
+      },
+      {
+       "id": "temporal_flickering",
+       "scale": "0-1"
+      },
+      {
+       "id": "dynamic_degree",
+       "scale": "0-1"
+      },
+      {
+       "id": "motion_smoothness",
+       "scale": "0-1"
+      },
+      {
+       "id": "hpsv3_quality",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "consistency",
+     "dims": [
+      {
+       "id": "background_consistency",
+       "scale": "0-1"
+      },
+      {
+       "id": "subject_consistency",
+       "scale": "0-1"
+      },
+      {
+       "id": "spatial_consistency",
+       "scale": "0-1"
+      },
+      {
+       "id": "gated_spatial_consistency",
+       "scale": "0-1"
+      },
+      {
+       "id": "perspective_consistency",
+       "scale": "0-1"
+      },
+      {
+       "id": "segment_continuity",
+       "scale": "0-1"
+      },
+      {
+       "id": "geometric_consistency",
+       "scale": "0-1"
+      },
+      {
+       "id": "photometric_consistency",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "setting_adherence",
+     "dims": [
+      {
+       "id": "scene_adherence",
+       "scale": "0-1"
+      },
+      {
+       "id": "subject_adherence",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "interaction_adherence",
+     "dims": [
+      {
+       "id": "navigation_trajectory",
+       "scale": "0-1"
+      },
+      {
+       "id": "event_edit_adherence",
+       "scale": "0-1"
+      },
+      {
+       "id": "subject_action_adherence",
+       "scale": "0-1"
+      },
+      {
+       "id": "perspective_switch_adherence",
+       "scale": "0-1"
+      }
+     ]
+    },
+    {
+     "id": "causality",
+     "dims": [
+      {
+       "id": "causal_fidelity",
+       "scale": "0-1"
+      },
+      {
+       "id": "visual_plausibility",
+       "scale": "0-1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fam.distribution",
+   "label": "Distribution / Fidelity",
+   "context_facets": [
+    "ref_set",
+    "backbone",
+    "prompt_set"
+   ],
+   "columns": [
+    {
+     "id": "fvd",
+     "scale": "raw",
+     "dir": "down"
+    },
+    {
+     "id": "kvd",
+     "scale": "raw",
+     "dir": "down"
+    },
+    {
+     "id": "vfid",
+     "scale": "raw",
+     "dir": "down"
+    },
+    {
+     "id": "clip-fvd",
+     "scale": "raw",
+     "dir": "down"
+    }
+   ],
+   "type": "family"
+  },
+  {
+   "id": "fam.alignment",
+   "label": "Text Alignment",
+   "context_facets": [
+    "prompt_set",
+    "backbone"
+   ],
+   "columns": [
+    {
+     "id": "clip-score",
+     "scale": "0-1",
+     "dir": "up"
+    },
+    {
+     "id": "viclip-score",
+     "scale": "0-1",
+     "dir": "up"
+    }
+   ],
+   "type": "family"
+  },
+  {
+   "id": "fam.compositional",
+   "label": "Compositional (CV)",
+   "context_facets": [
+    "prompt_set"
+   ],
+   "columns": [
+    {
+     "id": "numeracy",
+     "scale": "0-1",
+     "dir": "up"
+    },
+    {
+     "id": "spatial-relationship",
+     "scale": "0-1",
+     "dir": "up"
+    }
+   ],
+   "type": "family"
+  },
+  {
+   "id": "fam.perceptual",
+   "label": "Perceptual Quality",
+   "context_facets": [
+    "prompt_set",
+    "profile"
+   ],
+   "columns": [
+    {
+     "id": "aesthetic-quality",
+     "scale": "0-1",
+     "dir": "up"
+    },
+    {
+     "id": "imaging-quality",
+     "scale": "0-100",
+     "dir": "up"
+    }
+   ],
+   "type": "family"
+  },
+  {
+   "id": "fam.temporal",
+   "label": "Temporal / Motion",
+   "context_facets": [
+    "prompt_set",
+    "profile"
+   ],
+   "columns": [
+    {
+     "id": "temporal-flickering",
+     "scale": "0-1",
+     "dir": "up"
+    },
+    {
+     "id": "motion-smoothness",
+     "scale": "0-1",
+     "dir": "up"
+    },
+    {
+     "id": "dynamic-degree",
+     "scale": "0-1",
+     "dir": "neutral"
+    },
+    {
+     "id": "motion-magnitude",
+     "scale": "0-1",
+     "dir": "neutral"
+    }
+   ],
+   "type": "family"
+  },
+  {
+   "id": "fam.consistency",
+   "label": "Consistency",
+   "context_facets": [
+    "prompt_set",
+    "profile"
+   ],
+   "columns": [
+    {
+     "id": "subject-consistency",
+     "scale": "0-1",
+     "dir": "up"
+    },
+    {
+     "id": "background-consistency",
+     "scale": "0-1",
+     "dir": "up"
+    }
+   ],
+   "type": "family"
+  },
+  {
+   "id": "fam.artifact",
+   "label": "Artifact",
+   "context_facets": [
+    "judge",
+    "prompt_set"
+   ],
+   "columns": [
+    {
+     "id": "artifact-diagnostic",
+     "scale": "0-1",
+     "dir": "down",
+     "multilabel": true
+    }
+   ],
+   "type": "family"
+  }
+ ]
+}
