@@ -808,47 +808,47 @@
      "dims": [
       {
        "id": "object_class",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": true
       },
       {
        "id": "multiple_objects",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": true
       },
       {
        "id": "color",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": true
       },
       {
        "id": "material",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": true
       },
       {
        "id": "scene",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": true
       },
       {
        "id": "style",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": true
       },
       {
        "id": "pose",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": true
       },
       {
        "id": "emotion",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": true
       },
       {
        "id": "text_ocr",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": true
       }
      ]
@@ -858,7 +858,7 @@
      "dims": [
       {
        "id": "spatial_relationship",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": true
       }
      ]
@@ -868,37 +868,37 @@
      "dims": [
       {
        "id": "action",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": true
       },
       {
        "id": "motion_order",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": true
       },
       {
        "id": "dynamic_attribute",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": true
       },
       {
        "id": "dynamic_spatial_relationship",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": true
       },
       {
        "id": "human_interaction",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": true
       },
       {
        "id": "complex_plot",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": true
       },
       {
        "id": "complex_landscape",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": true
       }
      ]
@@ -908,12 +908,12 @@
      "dims": [
       {
        "id": "camera_motion",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": true
       },
       {
        "id": "shot_composition",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": true
       }
      ]
@@ -923,7 +923,7 @@
      "dims": [
       {
        "id": "temporal_modifier",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": true
       }
      ]
@@ -933,7 +933,7 @@
      "dims": [
       {
        "id": "overall",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": true
       }
      ]
