@@ -154,12 +154,12 @@
       },
       {
        "id": "aesthetic_quality",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": false
       },
       {
        "id": "motion_effects",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": false
       }
      ]
@@ -169,32 +169,32 @@
      "dims": [
       {
        "id": "temporal_consistency",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": false
       },
       {
        "id": "video_text_consistency",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": false
       },
       {
        "id": "object_class_consistency",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": false
       },
       {
        "id": "color_consistency",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": false
       },
       {
        "id": "action_consistency",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": false
       },
       {
        "id": "scene_consistency",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": false
       }
      ]
@@ -216,27 +216,27 @@
      "dims": [
       {
        "id": "subject_consistency",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": false
       },
       {
        "id": "scene_consistency",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": false
       },
       {
        "id": "inertial_consistency",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": false
       },
       {
        "id": "object_permanence",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": false
       },
       {
        "id": "semantic_drift",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": false
       }
      ]
@@ -246,37 +246,37 @@
      "dims": [
       {
        "id": "motion_smoothness",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": false
       },
       {
        "id": "temporal_flickering",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": false
       },
       {
        "id": "dynamic_degree",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": false
       },
       {
        "id": "composition_framing",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": false
       },
       {
        "id": "lighting_volumetric",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": false
       },
       {
        "id": "color_harmony",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": false
       },
       {
        "id": "structural_gestalt",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": false
       }
      ]
@@ -286,7 +286,7 @@
      "dims": [
       {
        "id": "physical_mechanics",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": false
       }
      ]
@@ -296,7 +296,7 @@
      "dims": [
       {
        "id": "human_fidelity",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": false
       }
      ]
@@ -306,7 +306,7 @@
      "dims": [
       {
        "id": "semantic_adherence",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": false
       }
      ]
@@ -316,7 +316,7 @@
      "dims": [
       {
        "id": "spatial_relationship",
-       "scale": "0-1",
+       "scale": "1-5",
        "judge_dependent": false
       }
      ]
