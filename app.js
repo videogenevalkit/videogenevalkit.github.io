@@ -77,10 +77,17 @@ function rowsForBench(board){
 function boardModel(board, rows){
   const jdep=judgeDepMap(board);
   const models=uniq(rows.map(r=>r.model));
-  const cell={}, grp={}, scale={};
-  rows.forEach(r=>{ (cell[r.model]=cell[r.model]||{})[r.dimension]=r; grp[r.dimension]=r.group||"other"; scale[r.dimension]=r.scale; });
-  const dimsByGroup={}; Object.keys(grp).forEach(d=>{ (dimsByGroup[grp[d]]=dimsByGroup[grp[d]]||[]).push(d); });
-  const groups=Object.keys(dimsByGroup).sort((a,b)=>{ const ia=GROUP_ORDER.indexOf(a), ib=GROUP_ORDER.indexOf(b); return (ia<0?99:ia)-(ib<0?99:ib); });
+  const cell={}, scale={};
+  rows.forEach(r=>{ (cell[r.model]=cell[r.model]||{})[r.dimension]=r; });
+  // CATALOG-driven dim set: every dimension the bench defines appears, so
+  // untested / removed-unreliable dims render as "—" (full picture for users).
+  const grp={}, dimsByGroup={};
+  (board.groups||[]).forEach(g=>{ dimsByGroup[g.id]=g.dims.map(d=>d.id);
+    g.dims.forEach(d=>{ grp[d.id]=g.id; scale[d.id]=d.scale; }); });
+  // data dim not in catalog → put under "other" (safety)
+  rows.forEach(r=>{ if(!(r.dimension in grp)){ grp[r.dimension]="other"; (dimsByGroup.other=dimsByGroup.other||[]).push(r.dimension); } scale[r.dimension]=r.scale; });
+  const groups=Object.keys(dimsByGroup).filter(g=>dimsByGroup[g] && dimsByGroup[g].length)
+    .sort((a,b)=>{ const ia=GROUP_ORDER.indexOf(a), ib=GROUP_ORDER.indexOf(b); return (ia<0?99:ia)-(ib<0?99:ib); });
   Object.values(dimsByGroup).forEach(ds=>ds.sort());
   const rankGroups=groups.filter(g=>g!=="holistic");
   const holisticDims=dimsByGroup["holistic"]||[];
@@ -116,6 +123,8 @@ function renderBench(board, rows){
   const bm=boardModel(board, rows);
   const {jdep,cell,scale,dimsByGroup,groups,rankGroups,overallDim,hasHead,gmean,score}=bm;
   const dispGroups=hasHead?rankGroups:groups;
+  // a dim is "untested" in this context if no model has a value → header greyed
+  const dimHasData={}; Object.values(dimsByGroup).forEach(ds=>ds.forEach(d=>{ dimHasData[d]=bm.models.some(m=>cell[m]&&cell[m][d]); }));
   const keyVal=(m)=> sortKey==="__score__"?score[m]
     : sortKey.startsWith("g:")?gmean[m][sortKey.slice(2)]
     : (cell[m][sortKey]?norm(cell[m][sortKey]):-1);
@@ -127,7 +136,8 @@ function renderBench(board, rows){
   dispGroups.forEach(g=>{ h+=`<th class="sortable mu" data-k="g:${g}">μ</th>`;
     dimsByGroup[g].forEach(d=>{ const sx=scale[d]!=="0-1"?`<br><span class=sc>${scale[d]}</span>`:"";
       const jd=jdep[d]?' <span class=jd title="judge-dependent — not shared across judges">⚖</span>':"";
-      h+=`<th class="sortable dim${jdep[d]?" jdep":""}" data-k="${d}">${d}${jd}${sx}</th>`; }); });
+      const nd=dimHasData[d]?"":" nodata"; const ttl=dimHasData[d]?"":' title="not evaluated in this context (— = no/unreliable data)"';
+      h+=`<th class="sortable dim${jdep[d]?" jdep":""}${nd}" data-k="${d}"${ttl}>${d}${jd}${sx}</th>`; }); });
   h+="</tr></thead><tbody>";
   sorted.forEach((m,i)=>{
     const medal=i<3?`<span class=medal>${["🥇","🥈","🥉"][i]}</span>`:(i+1);

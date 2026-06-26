@@ -173,3 +173,6 @@ svg.radar .rlabel{font-size:10px; fill:#6b7280}
 .mcbl{width:104px; font-size:10.5px; color:#6b7280; flex:none; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
 .mcbt{flex:1; height:8px; background:#f1f3f7; border-radius:4px; overflow:hidden}
 .mcbt i{display:block; height:100%}
+
+/* untested/unreliable dim header (— placeholder cells) */
+th.dim.nodata{color:#c2c8d6; font-style:italic; background:#fbfbfc}
